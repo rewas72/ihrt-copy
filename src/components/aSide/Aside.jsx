@@ -6,8 +6,10 @@ import { useSelector } from 'react-redux';
 const Aside = () => {
   // Events data
   const events = useSelector((state) => state.event.events);
+  const news = useSelector((state) => state.news.news);
+  const publications = useSelector((state) => state.publications.publications);
 
-  // News data
+  /*
   const news = [
     {
       title: 'Maktabatan: Two Libraries of 19th Century Algerian Manuscript Tradition',
@@ -42,7 +44,7 @@ const Aside = () => {
       author: 'Ernesto Dezza (ed.), Antonio Petagine (ed.)',
       link: '/publications/william-of-ware'
     }
-  ];
+  ];*/
 
   return (
     <aside className="layout-sidebar-first" role="complementary">
@@ -74,26 +76,22 @@ const Aside = () => {
         {/* News Block */}
         <div className="block">
           <h2>News</h2>
-          <div className="view-content">
+          <ul className="events-list">
             {news.map((item, index) => (
-              <div key={index} className="views-row colprev__item">
-                <header>
-                  <h3>
-                    <Link to={item.link}>{item.title}</Link>
-                  </h3>
-                </header>
-                <figure>
-                  <Link to={item.link}>
-                    <img src={item.image} alt={item.title} />
-                  </Link>
-                  <figcaption className="tags">
-                    <Link to="/news">{item.category}</Link>
-                  </figcaption>
-                </figure>
-                <p>{item.excerpt}</p>
-              </div>
+              <li key={index} className="events-list__item">
+                <div>
+                  <span className="events-list__item__date">{item.date}</span>
+                  <span className="events-list__item__type">{item.category}</span>
+                </div>
+                <div className="events-list__item__title">
+                  <Link to={item.link}>{item.title}</Link>
+                </div>
+                <div className="events-list__item__location">
+                  <p>{item.excerpt}</p>
+                </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
 
         {/* Publications Block */}
