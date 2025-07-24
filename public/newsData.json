@@ -1,0 +1,44 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "date": "03/04",
+      "type": "Araştırma programı",
+      "title": "Maktabatān: 19. yüzyılda Cezayir el yazması geleneğinin iki kütüphanesi",
+      "image": "/img/1.jpg",
+      "link": "/index.php/fr/actualites/programme-de-recherche/maktabatan-deux-bibliotheques-de-la-tradition-manuscrite"
+    },
+    {
+      "id": 2,
+      "date": "15/04",
+      "type": "Bildiri Çağrısı",
+      "title": "Scriptorium: Katkı çağrısı",
+      "image": "/img/1.jpg",
+      "link": "/index.php/fr/actualites/appel-communications/scriptorium-appel-contributions"
+    },
+    {
+      "id": 3,
+      "date": "28/05",
+      "type": "Ödül",
+      "title": "Duchalais Ödülü 2023: Clairvaux Manastırı Kütüphanesi 12. yüzyıldan 18. yüzyıla",
+      "image": "/img/1.jpg",
+      "link": "/index.php/fr/actualites/prix/prix-duchalais-2023-la-bibliotheque-de-labbaye-de-clairvaux-du-xiie-au-xviiie"
+    },
+    {
+      "id": 4,
+      "date": "01/06",
+      "type": "Dijitalleştirme",
+      "title": "Ortaçağ Arap Yazmaları Çevrimiçi Koleksiyonlara Aktarılıyor",
+      "image": "/img/1.jpg",
+      "link": "/index.php/fr/actualites/digitalisation/manuscrits-arabes-en-ligne"
+    },
+    {
+      "id": 5,
+      "date": "10/06",
+      "type": "Sergi",
+      "title": "Orta Çağ'da Kitap Üretimi: Yeni Sergi Duyuruldu",
+      "image": "/img/1.jpg",
+      "link": "/index.php/fr/actualites/exposition/production-des-livres-au-moyen-age"
+    }
+  ]
+}

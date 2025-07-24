@@ -1,0 +1,44 @@
+{
+    "publications": [
+        {
+            "id": 1,
+            "title": "Thomas Aquinas ve Duns Scotus Arasında 13. Yüzyılda Felsefe ve Teoloji Öğretimi",
+            "image": "/img/2.jpg",
+            "authors": "Ernesto Dezza (ed.), Antonio Petagine (ed.)",
+            "type": "Kitap",
+            "link": "/index.php/fr/publications/collections/studia-sententiarum-ssent/william-ware-sentences",
+            "illustration": "Kitap kapağı",
+            "editor": "Brepols",
+            "publicationYear": 2025,
+            "publicationPlace": "Turnhout",
+            "price": "105,00€",
+            "language": "İngilizce",
+            "collectionNumber": 8,
+            "collection": "Studia Sententiarum (SSENT)",
+            "ISBN": "978-2-503-61747-3",
+            "ISSN": "2506-7338",
+            "materialDescription": "xxvi + 616 sayfa, 156 x 234 mm",
+            "description": "Ware'li Fransisken William - Magister Scoti - 13. yüzyılın sonlarında bir ilahiyatçı olarak parladı. 14. yüzyıl teolojik ve felsefi tartışmaları üzerinde önemli bir etkiye sahip olmasına rağmen, düşünceleri hâlâ çok az biliniyor ve hak ettiğinden daha az inceleniyor. Bu durumun temel nedenlerinden biri, büyük ölçüde düzenlenmemiş olan Cümlelerin Dört Kitabı Üzerine Sorular adlı eserinin metnine erişimin zorluğundan kaynaklanmaktadır.\n\nBu cilt, tamamen Ware'li William'a adanmış ilk kitaptır. Amacı, metinleri ve öğretileri hakkında yenilenmiş bir bilgi birikimi sağlamaktır. Kitap, Ware'in metinleri üzerine yapılan çalışmalar ve baskılar hakkında güncel bilgiler ve teoloji, metafizik, fizik, epistemoloji, Kristoloji ve antropoloji gibi öğretilerinin önemli yönlerine dair özel çalışmalar içermektedir. Ayrıca, kitapta Cümleler Üzerine Yorum adlı eserinden daha önce yayınlanmamış sorular da yer almaktadır.\n\nGenel olarak, bu kitap William of Ware'in düşünceleri ve metinleri için temel bir referans niteliği taşımakta ve on üçüncü yüzyıldan on dördüncü yüzyıla geçişte skolastik kültüre dair yeni ve aydınlatıcı bir bakış açısı sunmaktadır."
+        },
+        {
+            "id": 2,
+            "title": "Thomas Aquinas ve Duns Scotus Arasında 13. Yüzyılda Felsefe ve Teoloji Öğretimi",
+            "image": "/img/2.jpg",
+            "authors": "Ernesto Dezza (ed.), Antonio Petagine (ed.)",
+            "type": "Kitap",
+            "link": "/index.php/fr/publications/collections/studia-sententiarum-ssent/william-ware-sentences",
+            "illustration": "Kitap kapağı",
+            "editor": "Brepols",
+            "publicationYear": 2025,
+            "publicationPlace": "Turnhout",
+            "price": "105,00€",
+            "language": "İngilizce",
+            "collectionNumber": 8,
+            "collection": "Studia Sententiarum (SSENT)",
+            "ISBN": "978-2-503-61747-3",
+            "ISSN": "2506-7338",
+            "materialDescription": "xxvi + 616 sayfa, 156 x 234 mm",
+            "description": "Ware'li Fransisken William - Magister Scoti - 13. yüzyılın sonlarında bir ilahiyatçı olarak parladı. 14. yüzyıl teolojik ve felsefi tartışmaları üzerinde önemli bir etkiye sahip olmasına rağmen, düşünceleri hâlâ çok az biliniyor ve hak ettiğinden daha az inceleniyor. Bu durumun temel nedenlerinden biri, büyük ölçüde düzenlenmemiş olan Cümlelerin Dört Kitabı Üzerine Sorular adlı eserinin metnine erişimin zorluğundan kaynaklanmaktadır.\n\nBu cilt, tamamen Ware'li William'a adanmış ilk kitaptır. Amacı, metinleri ve öğretileri hakkında yenilenmiş bir bilgi birikimi sağlamaktır. Kitap, Ware'in metinleri üzerine yapılan çalışmalar ve baskılar hakkında güncel bilgiler ve teoloji, metafizik, fizik, epistemoloji, Kristoloji ve antropoloji gibi öğretilerinin önemli yönlerine dair özel çalışmalar içermektedir. Ayrıca, kitapta Cümleler Üzerine Yorum adlı eserinden daha önce yayınlanmamış sorular da yer almaktadır.\n\nGenel olarak, bu kitap William of Ware'in düşünceleri ve metinleri için temel bir referans niteliği taşımakta ve on üçüncü yüzyıldan on dördüncü yüzyıla geçişte skolastik kültüre dair yeni ve aydınlatıcı bir bakış açısı sunmaktadır."
+        }
+    ]
+}

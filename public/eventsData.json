@@ -1,0 +1,81 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "date": "07/01",
+      "type": "Seminer",
+      "title": "Arapça büyü ve gizli bilimler metinleri: çözümleme, düzenleme, çeviri, analiz",
+      "time": "2025-01-07T10:00:00Z",
+      "location": "IISMM - EHESS"
+    },
+    {
+      "id": 2,
+      "date": "08/01",
+      "type": "Seminer",
+      "title": "Ortaçağ sözlükleri ve sözlüklerinin incelenmesi yoluyla İbranice'ye giriş",
+      "time": "2025-01-08T14:30:30Z",
+      "location": "Condorcet Kampüsü"
+    },
+    {
+      "id": 3,
+      "date": "08/01",
+      "type": "Seminer",
+      "title": "Latin Taş Ustaları: Kaynakları Araştırmak ve El Yazmalarını Okumak",
+      "time": "2025-01-08T14:00:00Z",
+      "location": "Condorcet Kampüsü"
+    },
+    {
+      "id": 4,
+      "date": "09/01",
+      "type": "Seminer",
+      "title": "Dijital Beşeri Bilimler: Arapça ve Akdeniz Dillerinde Dijital Yayıncılığa Giriş",
+      "time": "2025-01-09T10:00:00Z",
+      "location": "BULAC"
+    },
+    {
+      "id": 5,
+      "date": "09/01",
+      "type": "Seminer",
+      "title": "Antik kütüphanelerin tarihi",
+      "time": "2025-01-09T10:00:00Z",
+      "location": "Condorcet Kampüsü"
+    },
+    {
+      "id": 6,
+      "date": "10/01",
+      "type": "Seminer",
+      "title": "Yunan bitkisel ilaçlarının Antik Çağ'dan Orta Çağ sonuna kadar aktarımı",
+      "time": "2025-01-10T14:00:00Z",
+      "location": "EPHE (Paris)"
+    }
+  ],
+  "eventTypes": [
+    {"id": "all", "name": "Tüm etkinlikler"},
+    {"id": "69", "name": "Atölye"},
+    {"id": "125", "name": "Doktora atölyesi"},
+    {"id": "74", "name": "Diğer"},
+    {"id": "68", "name": "Konferans"},
+    {"id": "66", "name": "Konferans"},
+    {"id": "73", "name": "Tematik döngü"},
+    {"id": "72", "name": "Yaz okulu"},
+    {"id": "127", "name": "Doktora okulu"},
+    {"id": "9", "name": "Çalışma günü"},
+    {"id": "67", "name": "Bilgi günü"},
+    {"id": "100", "name": "Tematik gün"},
+    {"id": "5", "name": "Seminer"},
+    {"id": "65", "name": "Staj"},
+    {"id": "110", "name": "Yuvarlak masa"},
+    {"id": "142", "name": "Sonbahar Üniversitesi"}
+  ],
+  "years": [
+    {"value": "All", "label": "- Tüm -"},
+    {"value": "2019", "label": "2019"},
+    {"value": "2020", "label": "2020"},
+    {"value": "2021", "label": "2021"},
+    {"value": "2022", "label": "2022"},
+    {"value": "2023", "label": "2023"},
+    {"value": "2024", "label": "2024"},
+    {"value": "2025", "label": "2025"},
+    {"value": "2026", "label": "2026"}
+  ]
+}

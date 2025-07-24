@@ -1,0 +1,47 @@
+/* MainLayout.css */
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content-wrapper {
+  display: flex;
+  flex-direction: row; /* Soldan sağa akış */
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  gap: 40px;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+/* Main içerik sola gelir */
+.main-content {
+  flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Aside sağa yaslanır çünkü DOM sırasındaki son öğedir */
+.layout-sidebar-first {
+  width: 300px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  /* Eğer hala sola yapışıyorsa şunu ekle: */
+  margin-left: auto;
+}
+
+/* Mobilde alt alta gelsin */
+@media (max-width: 980px) {
+  .main-content-wrapper {
+    flex-direction: column;
+  }
+
+  .layout-sidebar-first {
+    width: 100%;
+    margin-left: 0;
+  }
+}

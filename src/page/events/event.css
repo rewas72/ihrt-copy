@@ -1,0 +1,194 @@
+.views-element-container {
+  margin-bottom: 2rem;
+}
+
+.view-filters {
+  margin-bottom: 2rem;
+}
+
+.form--inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.fieldgroup {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-radios ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.form-radios li {
+  margin: 0;
+}
+
+.form-select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-submit {
+  padding: 0.5rem 1rem;
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.agenda__events-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Her satırda 3 tane */
+  gap: 2rem;
+}
+
+.events-list__item {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.events-list__item__date {
+  font-weight: bold;
+}
+
+.events-list__item__type {
+  color: #666;
+}
+
+.events-list__item__title a {
+  color: #2e5679;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.events-list__item__title a:hover {
+  color: #9be1e5;
+}
+
+.events-list__item__time,
+.events-list__item__location {
+  color: #666;
+  font:1.6rem/2.4rem "Open Sans", sans-serif;
+}
+
+.pager__items {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pager__item button {
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.pager__item.is-active button {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.page-title {
+  font: bold 4rem/4.8rem "Roboto Condensed",sans-serif;
+  margin-bottom: 1rem;
+}
+
+
+/* Metin gibi görünen filtreler */
+.event-type-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+  
+}
+
+.event-type-link {
+  font-size: 1rem;
+  color: #444;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s;
+    font:1.6rem/2.4rem "Open Sans",sans-serif;
+
+}
+
+.event-type-link:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+.event-type-link.active {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #000;
+}
+
+/* Diğer var olan stillerle uyumlu olacak şekilde aşağıdakiler aynı kalabilir */
+.view-filters {
+  margin-bottom: 2rem;
+}
+
+.form--inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.year-select {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.form-select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-submit {
+  padding: 0.5rem 1rem;
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.agenda__events-list {
+  display: grid;
+  grid-template-columns: 1fr; /* mobilde tek sütun */
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .agenda__events-list {
+    grid-template-columns: repeat(3, 1fr); /* 3 sütunlu yapı */
+  }
+}
+
+.events-list__item {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: box-shadow 0.2s;
+}
+
