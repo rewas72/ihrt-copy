@@ -1,0 +1,156 @@
+/* Base styles */
+.order-reproductions-form {
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font: bold 5rem/1em "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+    color: #1d1d1b;
+}
+
+/* Form styles */
+.webform-submission-form {
+    max-width: 600px;
+    margin: 0;
+}
+
+.form-item {
+    margin-bottom: 20px;
+    color: var(--black);
+    font: 1.6rem/2.4rem "Open Sans", sans-serif;
+}
+
+.form-item label {
+    font: 1.6rem/2.4rem "Open Sans", sans-serif;
+    font-weight: bold;
+    color: var(--black);
+
+}
+
+.form-required::after {
+    content: ' *';
+    color: #d00;
+    font: 1.6rem/2.4rem "Open Sans", sans-serif;
+}
+
+.form-text {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font: 1.6rem "Open Sans", sans-serif;
+    vertical-align: middle;
+}
+
+.form-text.required {
+    border-color: #999;
+}
+
+.form-textarea-wrapper {
+    margin-top: 5px;
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    font: 1.6rem "Open Sans", sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 16px;
+}
+
+.form-managed-file {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.description {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+}
+
+.button--primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.button--primary:hover {
+    background-color: #0069d9;
+}
+
+.form-actions {
+    margin-top: 30px;
+}
+
+/* Link styles */
+a {
+    color: #2e5679;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #9be1e5;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .page-title {
+        font-size: 3rem;
+        line-height: 3.8rem;
+    }
+
+    .form-text,
+    .form-textarea {
+        font-size: 14px;
+    }
+
+    .button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+.page-title2 {
+    font: bold 4rem/4.8rem "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+    color: #1d1d1b;
+}
+
+.description {
+    font: 1.6rem/2.4rem "Open Sans", sans-serif;
+
+}
+
+.form-label {
+    font: 1.6rem/2.4rem "Open Sans", sans-serif;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.orders-divider {
+    border-bottom: 2px solid #1d1d1b;
+    margin: 30px 0 20px;
+}

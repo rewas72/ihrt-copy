@@ -64,7 +64,7 @@ mark {
 }
 
 del {
-    text-decoration: line-through;
+    text-decoration: none;
 }
 
 abbr[title], dfn[title] {
@@ -316,6 +316,8 @@ body .header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+      margin-top: -70px; /* Menüyü yukarı çekmek için negatif margin */
+
 }
 
 .main-nav {
@@ -819,4 +821,9 @@ header.overlay.visible::before {
   text-decoration: none;
   vertical-align:baseline;
   
+}
+
+.menu a{
+    text-decoration: none;
+    color: var(--black);
 }

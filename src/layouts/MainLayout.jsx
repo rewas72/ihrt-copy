@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux';
 import { fetchNewsData } from '../redux/actions/newsActions';
 import { fetchEventData } from '../redux/actions/eventActions';
 import { fetchPublicationsData } from '../redux/actions/publicationsActions';
+import { fetchMenuData } from '../redux/actions/menuActions';
 
 const MainLayout = () => {
 
@@ -23,18 +24,21 @@ const MainLayout = () => {
   useEffect(() => {
     dispatch(fetchPublicationsData())
   })
-  return (
-    <div className="layout">
-      <Header />
-      <div className="main-content-wrapper">
-        <main className="main-content">
-          <Outlet />
-        </main>
-        <Aside />
+  useEffect(() => {
+    dispatch(fetchMenuData())
+  })
+    return (
+      <div className="layout">
+        <Header />
+        <div className="main-content-wrapper">
+          <main className="main-content">
+            <Outlet />
+          </main>
+          <Aside />
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  );
-};
+    );
+  };
 
-export default MainLayout;
+  export default MainLayout;

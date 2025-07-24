@@ -1,76 +1,29 @@
-import React, { use, useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import './css/header.css';
 import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
 import logoCnrs from '../../assets/logo_CNRS.svg';
 import logoIrht from '../../assets/campus-condorcet-logo.svg';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchMenuData } from '../../redux/actions/menuActions';
 const Header = () => {
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
   const [newsletterVisible, setNewsletterVisible] = useState(false);
-
+  const menu = useSelector((state) => state.menu)
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchMenuData());
+  }, [dispatch]);  
   const toggleMobileMenu = () => {
     setMobileMenuVisible(!mobileMenuVisible);
   };
   const navigate = useNavigate()
+  const menuItems = menu.mainMenu || [];
+
 
   const toggleNewsletter = () => {
     setNewsletterVisible(!newsletterVisible);
   };
-
-  // Ana menü verileri
-  const mainMenuData = [
-    {
-      title: 'Hakkımızda',
-      onClick: () => navigate('/about-us'),
-      children: [
-        { title: 'IRHT Hakkında', onClick: () => navigate('/about-us/about-ihrt') },
-        { title: 'IRHT Organizasyonu', onClick: () => navigate('/about-us/organization') },
-        { title: 'IRHT Ortakları', onClick: () => navigate('/about-us/partners') },
-        { title: 'HCÉRES 2018-2023', onClick: () => navigate('/about-us/hceres') },
-        { title: 'İletişim Araçları', onClick: () => navigate('/about-us/communication-tools') },
-        { title: 'IRHT Dostları', onClick: () => navigate('/about-us/friends') },
-      ],
-    },
-    {
-      title: 'Araştırma',
-      onClick: () => navigate('/research'),
-      children: [
-        { title: 'Temalar ve Bölümler', onClick: () => navigate('/research/themes-sections') },
-        { title: 'Araştırma Programları', onClick: () => navigate('/research/programs') },
-        { title: 'Toplantılar', onClick: () => navigate('/research/meetings') },
-      ],
-    },
-    {
-      title: 'Kaynaklar',
-      onClick: () => navigate('/resources'),
-      children: [
-        { title: 'Veritabanları', onClick: () => navigate('/resources/databases') },
-        { title: 'Web Siteleri ve Araçlar', onClick: () => navigate('/resources/web-tools') },
-        { title: 'CoDEX XML Yayınları', onClick: () => navigate('/resources/codex') },
-        { title: 'Araştırma Günlükleri', onClick: () => navigate('/resources/research-diaries') },
-        { title: 'El Yazmaları Reprodüksiyon', onClick: () => navigate('/resources/manuscripts') },
-        { title: 'IRHT Kütüphanesi', onClick: () => navigate('/resources/library') },
-        { title: 'Açık Arşiv', onClick: () => navigate('/resources/open-archive') },
-      ],
-    },
-    {
-      title: 'Yayınlar',
-      onClick: () => navigate('/publications'),
-      children: [
-        { title: 'Yayın Kataloğu', onClick: () => navigate('/publications/catalog') },
-        { title: 'Koleksiyonlar', onClick: () => navigate('/publications/collections') },
-        { title: 'Dergiler', onClick: () => navigate('/publications/journals') },
-      ],
-    },
-    {
-      title: 'Eğitim',
-      onClick: () => navigate('/education'),
-      children: [
-        { title: 'Seminerler', onClick: () => navigate('/education/seminars') },
-        { title: 'Stajlar', onClick: () => navigate('/education/internships') },
-      ],
-    },
-  ];
 
   // İkincil menü verileri
   const secondaryMenuData = [
@@ -125,7 +78,7 @@ const Header = () => {
                     </a>
                   </li>
 
-                  {mainMenuData.map((menuItem, index) => (
+                  {menuItems.map((menuItem, index) => (
                     <li key={index} className={`menu-item ${menuItem.children ? 'menu-item--expanded' : ''}`}>
                       <a href={menuItem.path}>{menuItem.title}</a>
                       {menuItem.children && (
@@ -207,7 +160,7 @@ const Header = () => {
             <nav role="navigation" aria-labelledby="block-irht-theme-main-menu-menu" id="block-irht-theme-main-menu" className="settings-tray-editable block block-menu navigation menu--main main-nav" data-drupal-settingstray="editable">
               <h2 className="visually-hidden" id="block-irht-theme-main-menu-menu">Ana Navigasyon</h2>
               <ul className="menu">
-                {mainMenuData.map((menuItem, index) => (
+                {menuItems.map((menuItem, index) => (
                   <li key={index} className={`menu-item ${menuItem.children ? 'menu-item--expanded trigger' : ''}`}>
                     <a href={menuItem.path}>{menuItem.title}</a>
                     {menuItem.children && (

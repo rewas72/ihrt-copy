@@ -1,0 +1,223 @@
+{
+  "mainMenu": [
+    {
+      "title": "Hakkımızda",
+      "path": "/about-us",
+      "children": [
+        {
+          "title": "IRHT Hakkında",
+          "path": "/about-us/about-ihrt",
+          "blog": {
+            "title": "IRHT Kısaca",
+            "content": "1937 yılında kurulan Metin Araştırma ve Tarih Enstitüsü, CNRS'nin ayrı bir birimidir...",
+            "image": "/img/3.jpg"
+          }
+        },
+        {
+          "title": "IRHT Organizasyonu",
+          "path": "/about-us/organization",
+          "blog": {
+            "title": "IRHT Organizasyon Yapısı",
+            "content": "IRHT, yaklaşık 100 kişilik bir ekipten oluşur. Farklı merkezlere ve bölümlere dağılmıştır...",
+            "image": "/img/3.jpg"
+          }
+        },
+        {
+          "title": "IRHT Ortakları",
+          "path": "/about-us/partners",
+          "blog": {
+            "title": "IRHT'nin Bilimsel Ortakları",
+            "content": "IRHT, CNRS, Sorbonne Üniversitesi ve Orléans Üniversitesi gibi kurumlarla iş birliği içerisindedir...",
+            "image": "/img/3.jpg"
+          }
+        },
+        {
+          "title": "HCÉRES 2018-2023",
+          "path": "/about-us/hceres",
+          "blog": {
+            "title": "HCÉRES Değerlendirme Süreci",
+            "content": "2018-2023 dönemi boyunca IRHT, HCÉRES tarafından kalite değerlendirmesine tabi tutulmuştur...",
+            "image": "/img/3.jpg"
+          }
+        },
+        {
+          "title": "İletişim Araçları",
+          "path": "/about-us/communication-tools",
+          "blog": {
+            "title": "IRHT'de İletişim ve Yayın Araçları",
+            "content": "IRHT, dergi, bülten ve sosyal medya üzerinden düzenli bilgi paylaşımı yapmaktadır...",
+            "image": "/img/3.jpg"
+          }
+        },
+        {
+          "title": "IRHT Dostları",
+          "path": "/about-us/friends",
+          "blog": {
+            "title": "IRHT Dostları Derneği",
+            "content": "IRHT'nin destekçisi olan 'IRHT Dostları', kültürel faaliyetlere katkı sağlamaktadır...",
+            "image": "/img/3.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Araştırma",
+      "path": "/research",
+      "children": [
+        {
+          "title": "Temalar ve Bölümler",
+          "path": "/research/themes-sections",
+          "blog": {
+            "title": "Araştırma Temaları",
+            "content": "IRHT, paleografi, kodikoloji, filoloji gibi birçok disiplinde araştırma yürütmektedir...",
+            "image": "/img/3.jpg"
+          }
+        },
+        {
+          "title": "Araştırma Programları",
+          "path": "/research/programs",
+          "blog": {
+            "title": "IRHT Programları",
+            "content": "Uzun soluklu programlar, disiplinler arası ekiplerle yürütülmektedir...",
+            "image": "/img/3.jpg"
+          }
+        },
+        {
+          "title": "Toplantılar",
+          "path": "/research/meetings",
+          "blog": {
+            "title": "Bilimsel Toplantılar",
+            "content": "IRHT yılda birçok seminer, çalıştay ve uluslararası toplantı düzenlemektedir...",
+            "image": "/img/3.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Kaynaklar",
+      "path": "/resources",
+      "children": [
+        {
+          "title": "Veritabanları",
+          "path": "/resources/databases",
+          "blog": {
+            "title": "IRHT Veritabanları",
+            "content": "IRHT, Latince, Arapça, İbranice yazmalarla ilgili çok sayıda dijital veri kaynağı sunmaktadır...",
+            "image": "/img/3.jpg"
+          }
+        },
+        {
+          "title": "Web Siteleri ve Araçlar",
+          "path": "/resources/web-tools",
+          "blog": {
+            "title": "Dijital Araçlar",
+            "content": "Yazma çözümleme ve içerik arama için geliştirilen yazılımlar IRHT tarafından sağlanmaktadır...",
+            "image": "/img/3.jpg"
+          }
+        },
+        {
+          "title": "CoDEX XML Yayınları",
+          "path": "/resources/codex",
+          "blog": {
+            "title": "CoDEX XML Projesi",
+            "content": "IRHT, yazmaların dijital sunumu için XML formatında bir yayın sistemini benimsemiştir...",
+            "image": "/img/3.jpg"
+          }
+        },
+        {
+          "title": "Araştırma Günlükleri",
+          "path": "/resources/research-diaries",
+          "blog": {
+            "title": "Günlükten Notlar",
+            "content": "Araştırmacıların saha notları ve gözlemleri günlük olarak yayımlanmaktadır...",
+            "image": "/img/3.jpg"
+          }
+        },
+        {
+          "title": "El Yazmaları Reprodüksiyon",
+          "path": "/resources/manuscripts",
+          "blog": {
+            "title": "Yazma Koleksiyonu",
+            "content": "Dünyanın dört bir yanından binlerce yazma dijitalleştirilerek erişime açılmıştır...",
+            "image": "/img/3.jpg"
+          }
+        },
+        {
+          "title": "IRHT Kütüphanesi",
+          "path": "/resources/library",
+          "blog": {
+            "title": "Kütüphane Kaynakları",
+            "content": "IRHT kütüphanesi, metin edisyonları, dergiler ve özel koleksiyonlar içerir...",
+            "image": "/img/3.jpg"
+          }
+        },
+        {
+          "title": "Açık Arşiv",
+          "path": "/resources/open-archive",
+          "blog": {
+            "title": "IRHT Açık Arşiv",
+            "content": "Araştırma verileri ve yayınlar açık erişim platformunda paylaşılmaktadır...",
+            "image": "/img/3.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Yayınlar",
+      "path": "/publications",
+      "children": [
+        {
+          "title": "Yayın Kataloğu",
+          "path": "/publications/catalog",
+          "blog": {
+            "title": "IRHT Yayınları",
+            "content": "Enstitü tarafından yayımlanan tüm eserlerin listesi burada yer alır...",
+            "image": "/img/3.jpg"
+          }
+        },
+        {
+          "title": "Koleksiyonlar",
+          "path": "/publications/collections",
+          "blog": {
+            "title": "IRHT Koleksiyonları",
+            "content": "IRHT, farklı konu başlıklarında yayın koleksiyonları sunar...",
+            "image": "/img/3.jpg"
+          }
+        },
+        {
+          "title": "Dergiler",
+          "path": "/publications/journals",
+          "blog": {
+            "title": "Bilimsel Dergiler",
+            "content": "IRHT, metin tarihi ve yazmalar üzerine hakemli dergiler yayımlamaktadır...",
+            "image": "/img/3.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Eğitim",
+      "path": "/education",
+      "children": [
+        {
+          "title": "Seminerler",
+          "path": "/education/seminars",
+          "blog": {
+            "title": "IRHT Seminerleri",
+            "content": "Öğrencilere ve araştırmacılara yönelik tematik seminerler düzenlenmektedir...",
+            "image": "/img/3.jpg"
+          }
+        },
+        {
+          "title": "Stajlar",
+          "path": "/education/internships",
+          "blog": {
+            "title": "Araştırma Stajları",
+            "content": "Lisans ve lisansüstü öğrencilere IRHT'de staj imkânı sunulmaktadır...",
+            "image": "/img/3.jpg"
+          }
+        }
+      ]
+    }
+  ]
+}
