@@ -15,7 +15,7 @@ const NewsPage = () => {
 
   useEffect(() => {
     dispatch(fetchNewsData());
-  }, [dispatch]);   
+  }, [dispatch]);
 
   useEffect(() => {
     dispatch(fetchPublicationsData());
@@ -34,67 +34,41 @@ const NewsPage = () => {
     <main role="main" className="wrapper">
       <a id="main-content" tabIndex="-1"></a>
       <div className="layout-content content actus">
-        <div className="region region-content">         
+        <div className="region region-content">
           {/* Page Title */}
           <h1 className="page-title">IRHT haberleri</h1>
           {/* News Slider */}
-          <div className="views-element-container">
-            <div className="skin-default">
-              <div className="views_slideshow_cycle_main">
-                <div className="views_slideshow_cycle_teaser_section">
-                  {news.map((news, index) => (
-                    <div 
-                      key={news.id}
-                      className={`views_slideshow_cycle_slide ${index === activeSlide ? 'active' : ''}`}
-                      style={{ 
-                        display: index === activeSlide ? 'block' : 'none',
-                        zIndex: index === activeSlide ? 11 : 10
-                      }}
-                    >
-                      <article className="slider__item">
-                        <picture>
-                          <a href={news.link}>
-                            <img 
-                              src={news.image} 
-                              alt={news.title} 
-                              className="image-style-slider-home"
-                              width="865"
-                              height="299"
-                            />
-                          </a>
-                        </picture>
-                        <div>
-                          <div className="tags">
-                            <a href="/actualites">Haberler</a> / <a href="#">{news.category}</a>
-                          </div>
-                          <div className="slide__title">
-                            <a href={news.link} rel="bookmark">
-                              <span>{news.title}</span>
-                            </a>
-                          </div>
-                        </div>
-                      </article>
+          <div className="slider-container">
+            <div className="slider-wrapper" style={{ transform: `translateX(-${activeSlide * 100}%)` }}>
+              {news.map((item, index) => (
+                <div className="slider-slide" key={item.id}>
+                  <article className="slider__item">
+                    <a href={item.link}>
+                      <img src={item.image} alt={item.title} className="slider-image" />
+                    </a>
+                    <div className="tags">
+                      <a href="/actualites">Haberler</a> / <a href="#">{item.category}</a>
                     </div>
-                  ))}
+                    <div className="slide__title">
+                      <a href={item.link}>{item.title}</a>
+                    </div>
+                  </article>
                 </div>
-              </div>
+              ))}
+            </div>
 
-              {/* Slider Controls */}
-              <div className="views-slideshow-controls-bottom clearfix">
-                <ul className="widget_pager">
-                  {news.map((news, index) => (
-                    <li 
-                      key={news.id}
-                      className={index === activeSlide ? 'active' : ''}
-                      onClick={() => handleSlideChange(index)}
-                    >
-                      {index}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {/* Slider Controls */}
+            <div className="slider-controls">
+              {news.map((_, index) => (
+                <button
+                  key={index}
+                  className={`dot ${activeSlide === index ? 'active' : ''}`}
+                  onClick={() => handleSlideChange(index)}
+                />
+              ))}
             </div>
           </div>
+
 
           {/* Latest Publications */}
           <div className="views-element-container">
@@ -104,8 +78,8 @@ const NewsPage = () => {
                 {publications.map((pub, index) => (
                   <div key={index} className="views-row book">
                     <a href={pub.link}>
-                      <img 
-                        src={pub.image} 
+                      <img
+                        src={pub.image}
                         alt={pub.title}
                         className="image-style-medium"
                         width="142"
@@ -134,7 +108,7 @@ const NewsPage = () => {
                   <li key={index}>
                     <div className="rowprev__thumb">
                       <a href={event.link}>
-                        <img 
+                        <img
                           src="/sites/default/files/styles/max_325x325/public/image_site/evenements/paris-mazarine-1-5.jpg"
                           alt="El yazması, ilk I"
                           className="image-style-max-325x325"
@@ -158,7 +132,7 @@ const NewsPage = () => {
           </div>
         </div>
       </div>
-      
+
 
       {/* Back to top */}
       <div className="back-to-top">

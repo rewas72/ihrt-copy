@@ -10,6 +10,7 @@ import { fetchNewsData } from '../redux/actions/newsActions';
 import { fetchEventData } from '../redux/actions/eventActions';
 import { fetchPublicationsData } from '../redux/actions/publicationsActions';
 import { fetchMenuData } from '../redux/actions/menuActions';
+import { Home } from 'lucide-react';
 
 const MainLayout = () => {
 

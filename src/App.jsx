@@ -7,11 +7,12 @@ import Orders from './page/orders/Orders';
 import AboutPage from './page/about/AboutPage';
 import ResearchPage from './page/research/ResearchPage';
 import ResourcePage from './page/resource/Resource';
-
+import Home from './page/home/Home';
 function App() {
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>
+        <Route index element={<Home />} />
         <Route path= "events" element={<EventPage />} />
         <Route path="news" element={<NewsPage />} />
         <Route path="newsletter" element={<Newsletter />} />

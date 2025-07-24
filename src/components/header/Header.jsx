@@ -53,7 +53,7 @@ const Header = () => {
           <div className="region region-header">
             <div id="block-irht-theme-branding" className="settings-tray-editable block block-system block-system-branding-block" data-drupal-settingstray="editable">
               <div className="logo">
-                <a href="http://www.cnrs.fr" target="_blank" rel="noopener noreferrer">
+                <a href="/" target="_blank" rel="noopener noreferrer">
                   <img className="logo-CNRS" src={logo} />
                 </a>
                 <a href="/index.php/fr" rel="home" className="site-logo">
