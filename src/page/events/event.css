@@ -54,7 +54,6 @@
 }
 
 .events-list__item {
-  border-bottom: 1px solid #eee;
   padding-bottom: 1rem;
 }
 
@@ -186,7 +185,6 @@
 }
 
 .events-list__item {
-  padding: 1rem;
   border-radius: 8px;
   background-color: #fff;
   transition: box-shadow 0.2s;

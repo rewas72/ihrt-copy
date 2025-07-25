@@ -9,11 +9,13 @@ import { fetchMenuData } from '../../redux/actions/menuActions';
 const Header = () => {
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
   const [newsletterVisible, setNewsletterVisible] = useState(false);
+  const [isMenuHovered, setIsMenuHovered] = useState(false);
+
   const menu = useSelector((state) => state.menu)
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchMenuData());
-  }, [dispatch]);  
+  }, [dispatch]);
   const toggleMobileMenu = () => {
     setMobileMenuVisible(!mobileMenuVisible);
   };
@@ -27,11 +29,11 @@ const Header = () => {
 
   // İkincil menü verileri
   const secondaryMenuData = [
-    { title: 'Etkinlikler', onClick: () => navigate('/events') },
-    { title: 'Haberler', onClick: () => navigate('/news') },
-    { title: 'Bülten', onClick: () => navigate('/newsletter') },
-    { title: 'Rehber', onClick: () => navigate('/directory') },
-    { title: 'Siparişler', onClick: () => navigate('/orders') },
+    { title: 'Etkinlikler', path: '/events' },
+    { title: 'Haberler', path: '/news' },
+    { title: 'Bülten', path: '/newsletter' },
+    { title: 'Rehber', path: '/directory' },
+    { title: 'Siparişler', path: '/orders' },
     { title: 'İntranet', onClick: () => window.open('http://intranet.irht.cnrs.fr/', '_blank') },
   ];
 
@@ -46,8 +48,15 @@ const Header = () => {
     { title: 'Mastodon', onClick: () => window.open('https://social.sciences.re/@IRHT_CNRS', '_blank') },
   ];
 
+  const handleSecondaryMenuClick = (item) => {
+    if (item.onClick) {
+      item.onClick(); // dış link açılır
+    } else if (item.path) {
+      navigate(item.path); // iç sayfaya yönlendirme
+    }
+  };
   return (
-    <header role="banner" className={`overlay header ${mobileMenuVisible ? 'visible' : ''}`}>
+    <header role="banner" className={`overlay header ${mobileMenuVisible ? 'visible' : ''} ${isMenuHovered ? 'menu-open' : ''}`}>
       <div className="wrapper">
         <div className="header__top">
           <div className="region region-header">
@@ -130,7 +139,12 @@ const Header = () => {
                 <ul className="menu top-nav">
                   {secondaryMenuData.map((item, index) => (
                     <li key={index} className="menu-item">
-                      <button onClick={item.onClick} className="link-button">{item.title}</button>
+                      <button
+                        className="link-button"
+                        onClick={() => handleSecondaryMenuClick(item)}
+                      >
+                        {item.title}
+                      </button>
                     </li>
                   ))}
                 </ul>
@@ -161,7 +175,12 @@ const Header = () => {
               <h2 className="visually-hidden" id="block-irht-theme-main-menu-menu">Ana Navigasyon</h2>
               <ul className="menu">
                 {menuItems.map((menuItem, index) => (
-                  <li key={index} className={`menu-item ${menuItem.children ? 'menu-item--expanded trigger' : ''}`}>
+                  <li
+                    key={index}
+                    className={`menu-item ${menuItem.children ? 'menu-item--expanded trigger' : ''}`}
+                    onMouseEnter={() => setIsMenuHovered(true)}
+                    onMouseLeave={() => setIsMenuHovered(false)}
+                  >
                     <a href={menuItem.path}>{menuItem.title}</a>
                     {menuItem.children && (
                       <ul className="menu main-nav__sub">

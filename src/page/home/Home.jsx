@@ -4,18 +4,16 @@ import { fetchNewsData } from '../../redux/actions/newsActions';
 import { fetchPublicationsData } from '../../redux/actions/publicationsActions';
 import './home.css';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
-
     const [activeSlide, setActiveSlide] = useState(4); // Current active slide index
     const [publications, setPublications] = useState([]);
     const events = useSelector((state) => state.event.events);
     const news = useSelector((state) => state.news.news);
     const samplePublications = useSelector((state) => state.publications.publications);
     const dispatch = useDispatch();
-
-
     useEffect(() => {
         dispatch(fetchNewsData());
     }, [dispatch]);
@@ -23,7 +21,6 @@ const Home = () => {
     useEffect(() => {
         dispatch(fetchPublicationsData());
     })
-
     useEffect(() => {
         // In a real app, you would fetch this data from an API
         setPublications(samplePublications);
@@ -42,9 +39,6 @@ const Home = () => {
                                 <a href={item.link}>
                                     <img src={item.image} alt={item.title} className="slider-image" />
                                 </a>
-                                <div className="tags">
-                                    <a href="/actualites">Haberler</a> / <a href="#">{item.category}</a>
-                                </div>
                                 <div className="slide__title">
                                     <a href={item.link}>{item.title}</a>
                                 </div>
@@ -68,13 +62,16 @@ const Home = () => {
 
             <div className="about-container">
                 <div className="about-region">
-                    <h1 className="about-title">Hakkımızda</h1>
+                    <h1 className="home-title">Hakkımızda</h1>
                     <div className="about-intro-block">
-                        <p className="about-intro-text">
+                        <p className="home-intro-text">
                             Uluslararası alanda tanınan bir uzmanlık merkezi olan Yazma Tarihi ve Araştırma Enstitüsü (IRHT), yazıların, kitapların, kütüphanelerin, metinlerin ve süsleme sanatının tarihi üzerine uzmanlaşmış yüksek düzeyde araştırmacıları bir araya getirir.
                         </p>
                     </div>
                 </div>
+            </div>
+            <div className="more-link">
+                <Link to="/about-us" className="btn">View More</Link>
             </div>
             <div className="newsletter-divider"></div>
 
