@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './css/header.css';
 import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
@@ -55,48 +55,48 @@ const Header = () => {
   ];
 
   // Sosyal medya verileri
-   const socialMediaData = [
-    { 
-      title: 'Bluesky', 
-      path: 'https://bsky.app/profile/irht-cnrs.bsky.social', 
-      icon: bsky, 
-      hoverIcon: bsky_hover 
+  const socialMediaData = [
+    {
+      title: 'Bluesky',
+      path: 'https://bsky.app/profile/irht-cnrs.bsky.social',
+      icon: bsky,
+      hoverIcon: bsky_hover
     },
-    { 
-      title: 'Facebook', 
-      path: 'https://www.facebook.com/IRHT.CNRS/', 
-      icon: facebook, 
-      hoverIcon: facebook_hover 
+    {
+      title: 'Facebook',
+      path: 'https://www.facebook.com/IRHT.CNRS/',
+      icon: facebook,
+      hoverIcon: facebook_hover
     },
-    { 
-      title: 'Instagram', 
-      path: 'https://www.instagram.com/irht.cnrs', 
-      icon: instagram, 
-      hoverIcon: instagram_hover 
+    {
+      title: 'Instagram',
+      path: 'https://www.instagram.com/irht.cnrs',
+      icon: instagram,
+      hoverIcon: instagram_hover
     },
-    { 
-      title: 'Canal U', 
-      path: 'https://www.canal-u.tv/producteurs/irht', 
-      icon: canalu, 
-      hoverIcon: canalu_hover 
+    {
+      title: 'Canal U',
+      path: 'https://www.canal-u.tv/producteurs/irht',
+      icon: canalu,
+      hoverIcon: canalu_hover
     },
-    { 
-      title: 'Youtube', 
-      path: 'https://www.youtube.com/channel/UCjn5iBt9PCHjdaZr390q3Jg', 
-      icon: youtube, 
-      hoverIcon: youtube_hover 
+    {
+      title: 'Youtube',
+      path: 'https://www.youtube.com/channel/UCjn5iBt9PCHjdaZr390q3Jg',
+      icon: youtube,
+      hoverIcon: youtube_hover
     },
-    { 
-      title: 'Linkedin', 
-      path: 'https://www.linkedin.com/company/irht-cnrs/', 
-      icon: linkedin, 
-      hoverIcon: linkedin_hover 
+    {
+      title: 'Linkedin',
+      path: 'https://www.linkedin.com/company/irht-cnrs/',
+      icon: linkedin,
+      hoverIcon: linkedin_hover
     },
-    { 
-      title: 'Mastodon', 
-      path: 'https://social.sciences.re/@IRHT_CNRS', 
-      icon: mastodon, 
-      hoverIcon: mastodon_hover 
+    {
+      title: 'Mastodon',
+      path: 'https://social.sciences.re/@IRHT_CNRS',
+      icon: mastodon,
+      hoverIcon: mastodon_hover
     },
   ];
 
@@ -113,10 +113,17 @@ const Header = () => {
         <div className="header__top">
           <div className="region region-header">
             <div id="block-irht-theme-branding" className="settings-tray-editable block block-system block-system-branding-block" data-drupal-settingstray="editable">
-              <div className="logo">
-                <a href="/" target="_blank" rel="noopener noreferrer">
-                  <img className="logo-CNRS" src={logo} />
-                </a>
+              <div className="logo"
+                onClick={
+                  () => {
+                    debugger
+                    let seskek1 = document.getElementsByClassName("no-style");
+                    for (let i = 0; i < 5; i++) {
+                      seskek1[i].style.color = "red";
+                    }
+                  }
+                }>
+                <img className="logo-CNRS" src={logo} />
                 <a href="/index.php/fr" rel="home" className="site-logo">
                   <img src={logoCnrs} alt="Ana Sayfa" />
                 </a>
@@ -141,7 +148,7 @@ const Header = () => {
 
                   {menuItems.map((menuItem, index) => (
                     <li key={index} className={`menu-item ${menuItem.children ? 'menu-item--expanded' : ''}`}>
-                      <a href={menuItem.path}>{menuItem.title}</a>
+                      <a id={"selamMerhaba" + index} className='no-style selam ' href={menuItem.path}>{menuItem.title}</a>
                       {menuItem.children && (
                         <>
                           <span className="accordion">daha fazla</span>
@@ -233,12 +240,12 @@ const Header = () => {
                     onMouseEnter={() => setIsMenuHovered(true)}
                     onMouseLeave={() => setIsMenuHovered(false)}
                   >
-                    <a href={menuItem.path}>{menuItem.title}</a>
+                    <a className='no-hover-color' href={menuItem.path}>{menuItem.title}</a>
                     {menuItem.children && (
                       <ul className="menu main-nav__sub">
                         {menuItem.children.map((childItem, childIndex) => (
                           <li key={childIndex} className="menu-item">
-                            <a href={childItem.path}>{childItem.title}</a>
+                            <a className='no-hover-color'  href={childItem.path}>{childItem.title}</a>
                           </li>
                         ))}
                       </ul>
@@ -248,34 +255,34 @@ const Header = () => {
               </ul>
             </nav>
 
-             <nav 
-            role="navigation" 
-            aria-labelledby="block-irht-theme-reseauxsociaux-2-menu" 
-            id="block-irht-theme-reseauxsociaux-2" 
-            className="settings-tray-editable block block-menu navigation menu--reseaux-sociaux" 
-            data-drupal-settingstray="editable"
-          >
-            <h2 className="visually-hidden" id="block-irht-theme-reseauxsociaux-2-menu">Sosyal Medya</h2>
-            <ul className="footer-nav__social">
-              {socialMediaData.map((item, index) => (
-                <li 
-                  key={index} 
-                  className="menu-item"
-                  onMouseEnter={() => setHoveredIcon(index)}
-                  onMouseLeave={() => setHoveredIcon(null)}
-                >
-                  <a 
-                    href={item.path} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    aria-label={item.title}
+            <nav
+              role="navigation"
+              aria-labelledby="block-irht-theme-reseauxsociaux-2-menu"
+              id="block-irht-theme-reseauxsociaux-2"
+              className="settings-tray-editable block block-menu navigation menu--reseaux-sociaux"
+              data-drupal-settingstray="editable"
+            >
+              <h2 className="visually-hidden" id="block-irht-theme-reseauxsociaux-2-menu">Sosyal Medya</h2>
+              <ul className="footer-nav__social">
+                {socialMediaData.map((item, index) => (
+                  <li
+                    key={index}
+                    className="menu-item"
+                    onMouseEnter={() => setHoveredIcon(index)}
+                    onMouseLeave={() => setHoveredIcon(null)}
                   >
-                    
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
+                    <a
+                      href={item.path}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={item.title}
+                    >
+
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
         </nav>
       </div>

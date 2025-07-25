@@ -121,3 +121,118 @@
     width: 100%;
   }
 }
+
+
+.region-primary-menu .menu--reseaux-sociaux .footer-nav__social {
+    padding: 0;
+}
+
+.region-primary-menu .menu--reseaux-sociaux .footer-nav__social a {
+    display: block;
+}
+
+.region-primary-menu .footer-nav__social li,
+.main-nav__social li,
+.footer-nav__social li {
+    margin-right: 0;
+    margin-left: 11px;
+}
+
+.main-nav__social a,
+.footer-nav__social a {
+    position: relative;
+    font-size: 0;
+}
+
+.main-nav__social a::before,
+.footer-nav__social a::before {
+    display: block;
+}
+.main-nav__social a[href*="twitter"]::before,
+.footer-nav__social a[href*="twitter"]::before {
+    content: url(/img/social/twitter.svg);
+    width: 27px;
+}
+
+.main-nav__social a[href*="bsky"]::before,
+.footer-nav__social a[href*="bsky"]::before {
+    content: url(/img/social/bsky.svg);
+    width: 24px;
+}
+
+.main-nav__social a[href*="instagram"]::before,
+.footer-nav__social a[href*="instagram"]::before {
+    content: url(/img/social/instagram.svg);
+    width: 22px;
+}
+
+.main-nav__social a[href*="youtube"]::before,
+.footer-nav__social a[href*="youtube"]::before {
+    content: url(/img/social/youtube.svg);
+    width: 35px;
+}
+
+.main-nav__social a[href*="facebook"]::before,
+.footer-nav__social a[href*="facebook"]::before {
+    content: url(/img/social/facebook.svg);
+    width: 22px;
+}
+
+.main-nav__social a[href*="linkedin"]::before,
+.footer-nav__social a[href*="linkedin"]::before {
+    content: url(/img/social/linkedin.svg);
+    width: 22px;
+}
+
+.main-nav__social a[href*="canal-u"]::before,
+.footer-nav__social a[href*="canal-u"]::before {
+    content: url(/img/social/canalu.svg);
+    width: 22px;
+}
+
+.main-nav__social a[href*="social.sciences"]::before,
+.footer-nav__social a[href*="social.sciences"]::before {
+    content: url(/img/social/mastodon.svg);
+    width: 27px;
+}
+
+/* Hover halleri */
+.region-primary-menu .footer-nav__social a[href*="twitter"]:hover::before {
+    content: url(/img/social/twitter_hover.svg);
+}
+
+.region-primary-menu .footer-nav__social a[href*="bsky"]:hover::before {
+    content: url(/img/social/bsky_hover.svg);
+}
+
+.region-primary-menu .footer-nav__social a[href*="instagram"]:hover::before {
+    content: url(/img/social/instagram_hover.svg);
+}
+
+.region-primary-menu .footer-nav__social a[href*="youtube"]:hover::before {
+    content: url(/img/social/youtube_hover.svg);
+}
+
+.region-primary-menu .footer-nav__social a[href*="facebook"]:hover::before {
+    content: url(/img/social/facebook_hover.svg);
+}
+
+.region-primary-menu .footer-nav__social a[href*="linkedin"]:hover::before {
+    content: url(/img/social/linkedin_hover.svg);
+}
+
+.region-primary-menu .footer-nav__social a[href*="canal-u"]:hover::before {
+    content: url(/img/social/canalu_hover.svg);
+}
+
+.region-primary-menu .footer-nav__social a[href*="social.sciences"]:hover::before {
+    content: url(/public/img/social/mastodon_hover.svg);
+}
+.main-nav__social span,
+.footer-nav__social span {
+    overflow: hidden;
+    position: absolute;
+    top: -999px;
+    width: 1px;
+    height: 1px;
+}

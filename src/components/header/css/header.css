@@ -440,6 +440,10 @@ body .header {
     color: var(--black);
 }
 
+a.no-hover-color:hover {
+  color: black; /* Tüm varsayılan ve global stilleri sıfırlar */
+}
+
 .main-nav li>ul>li a:hover {
     text-decoration: underline;
 }
@@ -511,6 +515,7 @@ body .header {
 
 .region-primary-menu .menu--reseaux-sociaux .footer-nav__social {
     padding: 0;
+    margin-top: 10px;
 }
 
 .region-primary-menu .menu--reseaux-sociaux .footer-nav__social a {
@@ -933,13 +938,14 @@ header.overlay.visible::before {
     vertical-align: baseline;
 
 }
-
+.link-button:hover {
+    color: var(--black);
+    text-decoration: underline;
+}
 .menu a {
     text-decoration: none;
     color: var(--black);
 }
-
-
 header.menu-open::before {
   content: "";
   position: absolute;

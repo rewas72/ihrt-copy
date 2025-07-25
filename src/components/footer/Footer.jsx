@@ -9,6 +9,9 @@ import campusLogo from '../../assets/campus-condorcet-logo.svg';
 const Footer = () => {
   const navigate = useNavigate();
 
+
+  
+
   return (
     <footer className="footer">
       <div className="footer-top">
