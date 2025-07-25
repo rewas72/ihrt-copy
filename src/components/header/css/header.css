@@ -534,85 +534,85 @@ body .header {
 .footer-nav__social a::before {
     display: block;
 }
-
 .main-nav__social a[href*="twitter"]::before,
 .footer-nav__social a[href*="twitter"]::before {
-    content: url(/themes/irht_theme/img/social/twitter.svg);
+    content: url(/img/social/twitter.svg);
     width: 27px;
 }
 
 .main-nav__social a[href*="bsky"]::before,
 .footer-nav__social a[href*="bsky"]::before {
-    content: url(/themes/irht_theme/img/social/bsky.svg);
+    content: url(/img/social/bsky.svg);
     width: 24px;
 }
 
 .main-nav__social a[href*="instagram"]::before,
 .footer-nav__social a[href*="instagram"]::before {
-    content: url(/themes/irht_theme/img/social/instagram.svg);
+    content: url(/img/social/instagram.svg);
     width: 22px;
 }
 
 .main-nav__social a[href*="youtube"]::before,
 .footer-nav__social a[href*="youtube"]::before {
-    content: url(/themes/irht_theme/img/social/youtube.svg);
+    content: url(/img/social/youtube.svg);
     width: 35px;
 }
 
 .main-nav__social a[href*="facebook"]::before,
 .footer-nav__social a[href*="facebook"]::before {
-    content: url(/themes/irht_theme/img/social/facebook.svg);
+    content: url(/img/social/facebook.svg);
     width: 22px;
 }
 
 .main-nav__social a[href*="linkedin"]::before,
 .footer-nav__social a[href*="linkedin"]::before {
-    content: url(/themes/irht_theme/img/social/linkedin.svg);
+    content: url(/img/social/linkedin.svg);
     width: 22px;
 }
 
 .main-nav__social a[href*="canal-u"]::before,
 .footer-nav__social a[href*="canal-u"]::before {
-    content: url(/themes/irht_theme/img/social/canalu.svg);
+    content: url(/img/social/canalu.svg);
     width: 22px;
 }
 
 .main-nav__social a[href*="social.sciences"]::before,
 .footer-nav__social a[href*="social.sciences"]::before {
-    content: url(/themes/irht_theme/img/social/mastodon.svg);
+    content: url(/img/social/mastodon.svg);
     width: 27px;
 }
 
+/* Hover halleri */
 .region-primary-menu .footer-nav__social a[href*="twitter"]:hover::before {
-    content: url(/themes/irht_theme/img/social/twitter_hover.svg);
+    content: url(/img/social/twitter_hover.svg);
 }
 
 .region-primary-menu .footer-nav__social a[href*="bsky"]:hover::before {
-    content: url(/themes/irht_theme/img/social/bsky_hover.svg);
+    content: url(/img/social/bsky_hover.svg);
 }
 
 .region-primary-menu .footer-nav__social a[href*="instagram"]:hover::before {
-    content: url(/themes/irht_theme/img/social/instagram_hover.svg);
+    content: url(/img/social/instagram_hover.svg);
 }
 
 .region-primary-menu .footer-nav__social a[href*="youtube"]:hover::before {
-    content: url(/themes/irht_theme/img/social/youtube_hover.svg);
+    content: url(/img/social/youtube_hover.svg);
 }
 
 .region-primary-menu .footer-nav__social a[href*="facebook"]:hover::before {
-    content: url(/themes/irht_theme/img/social/facebook_hover.svg);
+    content: url(/img/social/facebook_hover.svg);
 }
 
 .region-primary-menu .footer-nav__social a[href*="linkedin"]:hover::before {
-    content: url(/themes/irht_theme/img/social/linkedin_hover.svg);
+    content: url(/img/social/linkedin_hover.svg);
 }
 
 .region-primary-menu .footer-nav__social a[href*="canal-u"]:hover::before {
-    content: url(/themes/irht_theme/img/social/canalu_hover.svg);
+    content: url(/img/social/canalu_hover.svg);
 }
 
 .region-primary-menu .footer-nav__social a[href*="social.sciences"]:hover::before {
-    content: url(/themes/irht_theme/img/social/mastodon_hover.svg);
+    content: url(/public/img/social/mastodon_hover.svg);
 }
 
 .main-nav__social span,

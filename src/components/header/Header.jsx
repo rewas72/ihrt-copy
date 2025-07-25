@@ -6,10 +6,27 @@ import logoCnrs from '../../assets/logo_CNRS.svg';
 import logoIrht from '../../assets/campus-condorcet-logo.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMenuData } from '../../redux/actions/menuActions';
+import bsky from '../../assets/social/bsky.svg';
+import canalu from '../../assets/social/canalu.svg';
+import facebook from '../../assets/social/facebook.svg';
+import instagram from '../../assets/social/instagram.svg';
+import linkedin from '../../assets/social/linkedin.svg';
+import mastodon from '../../assets/social/mastodon.svg';
+import youtube from '../../assets/social/youtube.svg';
+import bsky_hover from '../../assets/social/bsky_hover.svg';
+import canalu_hover from '../../assets/social/canalu_hover.svg';
+import facebook_hover from '../../assets/social/facebook_hover.svg';
+import instagram_hover from '../../assets/social/instagram_hover.svg';
+import linkedin_hover from '../../assets/social/linkedin_hover.svg';
+import mastodon_hover from '../../assets/social/mastodon_hover.svg';
+import youtube_hover from '../../assets/social/youtube_hover.svg';
+
+
 const Header = () => {
   const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
   const [newsletterVisible, setNewsletterVisible] = useState(false);
   const [isMenuHovered, setIsMenuHovered] = useState(false);
+  const [hoveredIcon, setHoveredIcon] = useState(null);
 
   const menu = useSelector((state) => state.menu)
   const dispatch = useDispatch();
@@ -38,14 +55,49 @@ const Header = () => {
   ];
 
   // Sosyal medya verileri
-  const socialMediaData = [
-    { title: 'Bluesky', onClick: () => window.open('https://bsky.app/profile/irht-cnrs.bsky.social', '_blank') },
-    { title: 'Facebook', onClick: () => window.open('https://www.facebook.com/IRHT.CNRS/', '_blank') },
-    { title: 'Instagram', onClick: () => window.open('https://www.instagram.com/irht.cnrs', '_blank') },
-    { title: 'Canal U', onClick: () => window.open('https://www.canal-u.tv/producteurs/irht', '_blank') },
-    { title: 'Youtube', onClick: () => window.open('https://www.youtube.com/channel/UCjn5iBt9PCHjdaZr390q3Jg', '_blank') },
-    { title: 'Linkedin', onClick: () => window.open('https://www.linkedin.com/company/irht-cnrs/', '_blank') },
-    { title: 'Mastodon', onClick: () => window.open('https://social.sciences.re/@IRHT_CNRS', '_blank') },
+   const socialMediaData = [
+    { 
+      title: 'Bluesky', 
+      path: 'https://bsky.app/profile/irht-cnrs.bsky.social', 
+      icon: bsky, 
+      hoverIcon: bsky_hover 
+    },
+    { 
+      title: 'Facebook', 
+      path: 'https://www.facebook.com/IRHT.CNRS/', 
+      icon: facebook, 
+      hoverIcon: facebook_hover 
+    },
+    { 
+      title: 'Instagram', 
+      path: 'https://www.instagram.com/irht.cnrs', 
+      icon: instagram, 
+      hoverIcon: instagram_hover 
+    },
+    { 
+      title: 'Canal U', 
+      path: 'https://www.canal-u.tv/producteurs/irht', 
+      icon: canalu, 
+      hoverIcon: canalu_hover 
+    },
+    { 
+      title: 'Youtube', 
+      path: 'https://www.youtube.com/channel/UCjn5iBt9PCHjdaZr390q3Jg', 
+      icon: youtube, 
+      hoverIcon: youtube_hover 
+    },
+    { 
+      title: 'Linkedin', 
+      path: 'https://www.linkedin.com/company/irht-cnrs/', 
+      icon: linkedin, 
+      hoverIcon: linkedin_hover 
+    },
+    { 
+      title: 'Mastodon', 
+      path: 'https://social.sciences.re/@IRHT_CNRS', 
+      icon: mastodon, 
+      hoverIcon: mastodon_hover 
+    },
   ];
 
   const handleSecondaryMenuClick = (item) => {
@@ -196,16 +248,34 @@ const Header = () => {
               </ul>
             </nav>
 
-            <nav role="navigation" aria-labelledby="block-irht-theme-reseauxsociaux-2-menu" id="block-irht-theme-reseauxsociaux-2" className="settings-tray-editable block block-menu navigation menu--reseaux-sociaux" data-drupal-settingstray="editable">
-              <h2 className="visually-hidden" id="block-irht-theme-reseauxsociaux-2-menu">Sosyal Medya</h2>
-              <ul className="footer-nav__social">
-                {socialMediaData.map((item, index) => (
-                  <li key={index} className="menu-item">
-                    <a href={item.path} target="_blank" rel="noopener noreferrer">{item.title}</a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+             <nav 
+            role="navigation" 
+            aria-labelledby="block-irht-theme-reseauxsociaux-2-menu" 
+            id="block-irht-theme-reseauxsociaux-2" 
+            className="settings-tray-editable block block-menu navigation menu--reseaux-sociaux" 
+            data-drupal-settingstray="editable"
+          >
+            <h2 className="visually-hidden" id="block-irht-theme-reseauxsociaux-2-menu">Sosyal Medya</h2>
+            <ul className="footer-nav__social">
+              {socialMediaData.map((item, index) => (
+                <li 
+                  key={index} 
+                  className="menu-item"
+                  onMouseEnter={() => setHoveredIcon(index)}
+                  onMouseLeave={() => setHoveredIcon(null)}
+                >
+                  <a 
+                    href={item.path} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    aria-label={item.title}
+                  >
+                    
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
           </div>
         </nav>
       </div>
